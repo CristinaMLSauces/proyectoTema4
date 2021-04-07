@@ -13,8 +13,29 @@ and open the template in the editor.
         <link href="./webroot/css/estilo2.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-        
-    <a class="home" href="../ProyectoDWES/index.php"><img src="./images/casa.png"/></a>
+    <a class="home" href="../proyectoDWES/index.php"><img src="./images/casa.png"/></a>
+    
+    <h1>Manuales conexion a la base de datos</h1>
+    <section class="manual">
+        <a href="doc/CONEXIÓN A LA BASE DE DATOS DESDE CASA.pdf" target="_blank">
+            <div>
+                <h2>CASA</h2>
+            </div>
+        </a>
+    
+        <a href="doc/Documentacion NetBeans Proyectos.pdf" target="_blank">
+            <div>
+                <h2>DESAROLLO</h2>
+            </div>
+        </a>
+    
+        <a href="doc/CONEXIÓN A LA BASE DE DATOS  EN 1&1 .pdf" target="_blank">
+            <div>
+                <h2>EXPLOTACION</h2>
+            </div>
+        </a>
+    </section>
+    
     <h1>Ejercicios tema 4</h1>
 
 <table style="width:90%" >
@@ -24,11 +45,11 @@ and open the template in the editor.
     <th colspan="2">MYSQLI</th>
   </tr>
   <tr>
-    <td> <a href=" ">Ejercicio 0 - Scripts iniciales </a></td>
+    <td> <a href="./codigoPHP/ejercicio00.php">Ejercicio 0 - Scripts iniciales </a></td>
     <td><a title="Codigo" href="./codigoPHP/ejercicio00.php"><img src="./images/codigo.png"/></a></td>
  </tr>
  <tr>
-    <td> <a href=" ">Ejercicio 0 - Scripts iniciales 1&1 </a></td>
+    <td> <a href="./codigoPHP/ejercicio01.php">Ejercicio 0 - Scripts iniciales 1&1 </a></td>
     <td><a title="Codigo" href="./codigoPHP/ejercicio01.php"><img src="./images/codigo.png"/></a></td>
  </tr>
  <tr>
