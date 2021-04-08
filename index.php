@@ -69,25 +69,30 @@ and open the template in the editor.
  </tr>
   <tr>
     <td><a href=" ">Ejercicio 2 -  Mostrar el contenido de la tabla Departamento y el número de registros. </a></td>
-<!--    <td><a title="Play" href="./codigoPHP/ejercicio02PDO.php"><img src="./images/play.png"/></a></td>
+    <td><a title="Play" href="./codigoPHP/ejercicio02PDO.php"><img src="./images/play.png"/></a></td>
     <td><a title="Codigo" href="./mostrarcodigo/muestraEjercicio02PDO.php"><img src="./images/codigo.png"/></a></td>
-    <td><a title="Play" href="./codigoPHP/ejercicio02MYSQLI.php"><img src="./images/play.png"/></a></td>
+<!--    <td><a title="Play" href="./codigoPHP/ejercicio02MYSQLI.php"><img src="./images/play.png"/></a></td>
     <td><a title="Codigo" href="./mostrarcodigo/muestraEjercicio02MYSQLI.php"><img src="./images/codigo.png"/></a></td>-->
  </tr>
  <tr>
     <td><a href="./codigoPHP/ejercicio03PDO.php">Ejercicio 3 -  Formulario para añadir un departamento a la tabla Departamento con validación de entrada y control de errores </a></td>
-<!--    <td><a title="Play" href="./codigoPHP/ejercicio03PDO.php"><img src="./images/play.png"/></a></td>
-    <td><a title="Codigo" href="./mostrarcodigo/muestraEjercicio03PDO.php"><img src="./images/codigo.png"/></a></td>-->
+    <td><a title="Play" href="./codigoPHP/ejercicio03PDO.php"><img src="./images/play.png"/></a></td>
+    <td><a title="Codigo" href="./mostrarcodigo/muestraEjercicio03PDO.php"><img src="./images/codigo.png"/></a></td>
  </tr>
  <tr>
     <td><a href="./codigoPHP/ejercicio04PDO.php">Ejercicio 4 - Formulario de búsqueda de departamentos por descripción. </a></td>
-<!--    <td><a title="Play" href="./codigoPHP/ejercicio04PDO.php"><img src="./images/play.png"/></a></td>
-    <td><a title="Codigo" href="./mostrarcodigo/muestraEjercicio04PDO.php"><img src="./images/codigo.png"/></a></td>-->
+    <td><a title="Play" href="./codigoPHP/ejercicio04PDO.php"><img src="./images/play.png"/></a></td>
+    <td><a title="Codigo" href="./mostrarcodigo/muestraEjercicio04PDO.php"><img src="./images/codigo.png"/></a></td>
  </tr>
  <tr>
     <td><a href="./codigoPHP/ejercicio05PDO.php">Ejercicio 5 - Añade tres registros a Departamento utilizando tres insert y una transacción, de tal forma que o se añadan los tres o ninguno </a></td>
-<!--    <td><a title="Play" href="./codigoPHP/ejercicio05PDO.php"><img src="./images/play.png"/></a></td>
-    <td><a title="Codigo" href="./mostrarcodigo/muestraEjercicio05PDO.php"><img src="./images/codigo.png"/></a></td>-->
+    <td><a title="Play" href="./codigoPHP/ejercicio05PDO.php"><img src="./images/play.png"/></a></td>
+    <td><a title="Codigo" href="./mostrarcodigo/muestraEjercicio05PDO.php"><img src="./images/codigo.png"/></a></td>
+ </tr>
+  <tr>
+    <td><a href="">Ejercicio 5.1 - Borrar los registros anteriores </a></td>
+    <td><a title="Play" href="./codigoPHP/ejercicio05.1PDO.php"><img src="./images/play.png"/></a></td>
+    <td><a title="Codigo" href="./mostrarcodigo/muestraEjercicio05.1PDO.php"><img src="./images/codigo.png"/></a></td>
  </tr>
  <tr>
     <td><a href="./codigoPHP/ejercicio06PDO.php">Ejercicio 6 - Cargue registros en la tabla Departamento desde un array departamentosnuevos utilizando una consulta preparada.  </a></td>
