@@ -13,8 +13,29 @@ and open the template in the editor.
         <link href="./webroot/css/estilo2.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-        
-    <a class="home" href="../ProyectoDWES/index.php"><img src="./images/casa.png"/></a>
+    <a class="home" href="../proyectoDWES/index.php"><img src="./images/casa.png"/></a>
+    
+    <h1>Manuales conexion a la base de datos</h1>
+    <section class="manual">
+        <a href="doc/CONEXIÓN A LA BASE DE DATOS DESDE CASA.pdf" target="_blank">
+            <div>
+                <h2>CASA</h2>
+            </div>
+        </a>
+    
+        <a href="doc/Documentacion NetBeans Proyectos.pdf" target="_blank">
+            <div>
+                <h2>DESAROLLO</h2>
+            </div>
+        </a>
+    
+        <a href="doc/CONEXIÓN A LA BASE DE DATOS  EN 1&1 .pdf" target="_blank">
+            <div>
+                <h2>EXPLOTACION</h2>
+            </div>
+        </a>
+    </section>
+    
     <h1>Ejercicios tema 4</h1>
 
 <table style="width:90%" >
@@ -24,11 +45,11 @@ and open the template in the editor.
     <th colspan="2">MYSQLI</th>
   </tr>
   <tr>
-    <td> <a href=" ">Ejercicio 0 - Scripts iniciales </a></td>
+    <td> <a href="./codigoPHP/ejercicio00.php">Ejercicio 0 - Scripts iniciales </a></td>
     <td><a title="Codigo" href="./codigoPHP/ejercicio00.php"><img src="./images/codigo.png"/></a></td>
  </tr>
  <tr>
-    <td> <a href=" ">Ejercicio 0 - Scripts iniciales 1&1 </a></td>
+    <td> <a href="./codigoPHP/ejercicio01.php">Ejercicio 0 - Scripts iniciales 1&1 </a></td>
     <td><a title="Codigo" href="./codigoPHP/ejercicio01.php"><img src="./images/codigo.png"/></a></td>
  </tr>
  <tr>
@@ -48,30 +69,35 @@ and open the template in the editor.
  </tr>
   <tr>
     <td><a href=" ">Ejercicio 2 -  Mostrar el contenido de la tabla Departamento y el número de registros. </a></td>
-<!--    <td><a title="Play" href="./codigoPHP/ejercicio02PDO.php"><img src="./images/play.png"/></a></td>
+    <td><a title="Play" href="./codigoPHP/ejercicio02PDO.php"><img src="./images/play.png"/></a></td>
     <td><a title="Codigo" href="./mostrarcodigo/muestraEjercicio02PDO.php"><img src="./images/codigo.png"/></a></td>
-    <td><a title="Play" href="./codigoPHP/ejercicio02MYSQLI.php"><img src="./images/play.png"/></a></td>
+<!--    <td><a title="Play" href="./codigoPHP/ejercicio02MYSQLI.php"><img src="./images/play.png"/></a></td>
     <td><a title="Codigo" href="./mostrarcodigo/muestraEjercicio02MYSQLI.php"><img src="./images/codigo.png"/></a></td>-->
  </tr>
  <tr>
     <td><a href="./codigoPHP/ejercicio03PDO.php">Ejercicio 3 -  Formulario para añadir un departamento a la tabla Departamento con validación de entrada y control de errores </a></td>
-<!--    <td><a title="Play" href="./codigoPHP/ejercicio03PDO.php"><img src="./images/play.png"/></a></td>
-    <td><a title="Codigo" href="./mostrarcodigo/muestraEjercicio03PDO.php"><img src="./images/codigo.png"/></a></td>-->
+    <td><a title="Play" href="./codigoPHP/ejercicio03PDO.php"><img src="./images/play.png"/></a></td>
+    <td><a title="Codigo" href="./mostrarcodigo/muestraEjercicio03PDO.php"><img src="./images/codigo.png"/></a></td>
  </tr>
  <tr>
     <td><a href="./codigoPHP/ejercicio04PDO.php">Ejercicio 4 - Formulario de búsqueda de departamentos por descripción. </a></td>
-<!--    <td><a title="Play" href="./codigoPHP/ejercicio04PDO.php"><img src="./images/play.png"/></a></td>
-    <td><a title="Codigo" href="./mostrarcodigo/muestraEjercicio04PDO.php"><img src="./images/codigo.png"/></a></td>-->
+    <td><a title="Play" href="./codigoPHP/ejercicio04PDO.php"><img src="./images/play.png"/></a></td>
+    <td><a title="Codigo" href="./mostrarcodigo/muestraEjercicio04PDO.php"><img src="./images/codigo.png"/></a></td>
  </tr>
  <tr>
     <td><a href="./codigoPHP/ejercicio05PDO.php">Ejercicio 5 - Añade tres registros a Departamento utilizando tres insert y una transacción, de tal forma que o se añadan los tres o ninguno </a></td>
-<!--    <td><a title="Play" href="./codigoPHP/ejercicio05PDO.php"><img src="./images/play.png"/></a></td>
-    <td><a title="Codigo" href="./mostrarcodigo/muestraEjercicio05PDO.php"><img src="./images/codigo.png"/></a></td>-->
+    <td><a title="Play" href="./codigoPHP/ejercicio05PDO.php"><img src="./images/play.png"/></a></td>
+    <td><a title="Codigo" href="./mostrarcodigo/muestraEjercicio05PDO.php"><img src="./images/codigo.png"/></a></td>
+ </tr>
+  <tr>
+    <td><a href="./codigoPHP/ejercicio05.1PDO.php">Ejercicio 5.1 - Borrar los campos insertados antes </a></td>
+    <td><a title="Play" href="./codigoPHP/ejercicio05.1PDO.php"><img src="./images/play.png"/></a></td>
+    <td><a title="Codigo" href=""><img src="./images/codigo.png"/></a></td>
  </tr>
  <tr>
     <td><a href="./codigoPHP/ejercicio06PDO.php">Ejercicio 6 - Cargue registros en la tabla Departamento desde un array departamentosnuevos utilizando una consulta preparada.  </a></td>
-<!--    <td><a title="Play" href="./codigoPHP/ejercicio06PDO.php"><img src="./images/play.png"/></a></td>
-    <td><a title="Codigo" href="./mostrarcodigo/muestraEjercicio06PDO.php"><img src="./images/codigo.png"/></a></td>-->
+   <td><a title="Play" href="./codigoPHP/ejercicio06PDO.php"><img src="./images/play.png"/></a></td>
+    <td><a title="Codigo" href="./mostrarcodigo/muestraEjercicio06PDO.php"><img src="./images/codigo.png"/></a></td>
  </tr>  
  <tr>
     <td><a href="./codigoPHP/ejercicio07PDO.php">Ejercicio 7 - Exportar  </a></td>
