@@ -90,14 +90,14 @@ and open the template in the editor.
     <td><a title="Codigo" href="./mostrarcodigo/muestraEjercicio05PDO.php"><img src="./images/codigo.png"/></a></td>
  </tr>
   <tr>
-    <td><a href="">Ejercicio 5.1 - Borrar los registros anteriores </a></td>
+    <td><a href="./codigoPHP/ejercicio05.1PDO.php">Ejercicio 5.1 - Borrar los campos insertados antes </a></td>
     <td><a title="Play" href="./codigoPHP/ejercicio05.1PDO.php"><img src="./images/play.png"/></a></td>
-    <td><a title="Codigo" href="./mostrarcodigo/muestraEjercicio05.1PDO.php"><img src="./images/codigo.png"/></a></td>
+    <td><a title="Codigo" href=""><img src="./images/codigo.png"/></a></td>
  </tr>
  <tr>
     <td><a href="./codigoPHP/ejercicio06PDO.php">Ejercicio 6 - Cargue registros en la tabla Departamento desde un array departamentosnuevos utilizando una consulta preparada.  </a></td>
-<!--    <td><a title="Play" href="./codigoPHP/ejercicio06PDO.php"><img src="./images/play.png"/></a></td>
-    <td><a title="Codigo" href="./mostrarcodigo/muestraEjercicio06PDO.php"><img src="./images/codigo.png"/></a></td>-->
+   <td><a title="Play" href="./codigoPHP/ejercicio06PDO.php"><img src="./images/play.png"/></a></td>
+    <td><a title="Codigo" href="./mostrarcodigo/muestraEjercicio06PDO.php"><img src="./images/codigo.png"/></a></td>
  </tr>  
  <tr>
     <td><a href="./codigoPHP/ejercicio07PDO.php">Ejercicio 7 - Exportar  </a></td>

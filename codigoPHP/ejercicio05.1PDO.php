@@ -21,15 +21,15 @@
                 $miDB->beginTransaction();                                      //Deshabilita el modo autocommit
 
                     $consulta = "DELETE FROM Departamento WHERE CodDepartamento='COM'";
-                    $consulta1 = "INSERT FROM Departamento WHERE CodDepartamento='ING'";
-                    $consulta2 = "INSERT FROM Departamento WHERE CodDepartamento='EMP'";
+                    $consulta1 = "DELETE FROM Departamento WHERE CodDepartamento='ING'";
+                    $consulta2 = "DELETE FROM Departamento WHERE CodDepartamento='EMP'";
                     
                     $miDB->exec($consulta);
                     $miDB->exec($consulta1); 
                     $miDB->exec($consulta2); 
                    
               
-                    echo "<p>La inserccion de los registros se ha hecho correctamente</p>";
+                    echo "<p>Se han borrado los registros correctamente</p>";
                     
                     $miDB->commit();                                            // Si todo fue bien confirma los cambios
                     
