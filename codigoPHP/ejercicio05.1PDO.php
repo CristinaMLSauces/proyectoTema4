@@ -11,7 +11,7 @@
  <?php 
 
 
-        require_once '../config/configDBPDO.php';                               //Importamos la conexion a la base de datos
+        require_once '../config/configDBPDO_1&1.php';                               //Importamos la conexion a la base de datos
         $ok = true;
             try {
                

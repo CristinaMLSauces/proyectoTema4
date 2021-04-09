@@ -4,12 +4,12 @@
         <title>Cristina Manjon</title>
         <meta charset="UTF-8">
         <meta name="author" content="Cristina Manjon Lacalle">
-        
+ 
     </head>
     <body>
         <h3>Conexión a la base de datos con la cuenta usuario y tratamiento de errores</h3>
        <?php 
-        require_once '../config/configDBPDO.php';
+        require_once '../config/configDBPDO_1&1.php';
             //Establecer una conexión con la base de datos 
             $miDB = new PDO(HOST,USER,PASSWORD);
             //La clase PDO permite definir la fórmula que usará cuando se produzca un error, utilizando el atributo PDO::ATTR_ERRMODE

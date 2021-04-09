@@ -10,7 +10,7 @@
         <h3>Formulario e inserccion de datos en tabla</h3>
        <?php 
         require_once '../core/210322ValidacionFormularios.php';   //Importamos la libreria de validacion
-        require_once '../config/configDBPDO.php';                               //Importamos la conexion a la base de datos
+        require_once '../config/configDBPDO_1&1.php';                               //Importamos la conexion a la base de datos
         
         
         $entradaOK = true;                                      //Declaramos una variable booleana para comprobar despues si se ejecuta la consulta
@@ -22,11 +22,11 @@
                          'DescDepartamento' => null,];
         
         if (isset($_POST['enviar'])) {                          //Si se ha pulsado el boton de enviar entonces :
-            $CodDepartamento=$_REQUEST['CodDepartamento'];
+            $CodDepartamento=$_REQUEST['CodDepartamento'];      //Guardamos en las variables el valor que han introducido en el formulario
             $DescDepartamento=$_REQUEST['DescDepartamento'];
             
             $aErrores['CodDepartamento'] = validacionFormularios::comprobarAlfabetico($_REQUEST['CodDepartamento'], 3, 3, 1);  //Para validarlo le pones un min y max que coincida con ese campo
-            $aErrores['DescDepartamento'] = validacionFormularios::comprobarAlfabetico($_REQUEST['DescDepartamento'], 255, 1, 1); //Tambien le ponemos que el campo sera obligatorio
+            $aErrores['DescDepartamento'] = validacionFormularios::comprobarAlfabetico($_REQUEST['DescDepartamento'], 255, 1, 1); //Tambien le ponemos que el campo sera obligatorio con el 1 al final
             
             foreach($aErrores as $error){                       //Recorre el array en busca de errores, con que haya uno entra
                 if($error != null){                
@@ -53,8 +53,9 @@
 
         //-----------------------Hacemos la consulta-------------------------------------
                 
-                $consulta = "INSERT INTO Departamento(CodDepartamento, DescDepartamento) VALUES('$CodDepartamento' ,'$DescDepartamento')"; //Guardamos en la variable la consulta que queremos hacer
-                $registrosConsulta = $miDB->exec($consulta);     //En $registrosConsulta guarda el número de filas afectadas
+//              
+                $consulta = $miDB->prepare("INSERT INTO Departamento(CodDepartamento, DescDepartamento) VALUES('$CodDepartamento' ,'$DescDepartamento')");  //Preparamos al consulta y la guardamos en la variable
+                $registrosConsulta =$consulta->execute();                                                      //Ejecutamos la consulta y en registrosconsulta guardamos las lineas afectadas en al tabla
 
                     if( $registrosConsulta >= 1){                //Si el numero de filas es por lo menos una , la inserccion se ha hecho
                         echo 'Inserción correcta <br>';
@@ -63,7 +64,7 @@
         //-------------------------Mostrar toda la tabla ----------------------------------           
                     
                 $consulta = "SELECT * FROM Departamento";       //Guardamos en la variable la consulta que queremos hacer
-                $resultadoConsulta = $miDB->query($consulta);   //Guardamos en resultado la consulta y la base de datos en la que se va a ejecutar
+                $resultadoConsulta = $miDB->prepare($consulta);   //Guardamos en resultado la consulta y la base de datos en la que se va a ejecutar
                 $resultadoConsulta->execute();                  //Ejecutamos la consulta
             
                 //No se hace con un exec por que no es una consulta de actulizacion
@@ -71,13 +72,13 @@
                 //Si la última sentencia SQL ejecutada por el objeto PDOStatement asociado fue una sentencia SELECT, algunas bases de datos podrían devolver el número de filas devuelto por dicha sentencia.
             
                 echo "<p><strong>Codigo  | Descripcion  | Volumen </strong></p>";
-                $odepartamento = $resultadoConsulta->fetchObject(); 
+                $oDepartamento = $resultadoConsulta->fetchObject(); 
                 
-                while ($odepartamento) {                                    //El fetchObject obtiene la siguiente fila y la devuelve como objeto.
-                    echo "<p>$odepartamento->CodDepartamento     |  ";      //Mostramos el reguistro de la fila de CodDepartamento
-                    echo " $odepartamento->DescDepartamento      |  ";
-                    echo " $odepartamento->VolumenNegocio    </p>";
-                    $odepartamento = $resultadoConsulta->fetchObject();
+                while ($oDepartamento) {                                    //El fetchObject obtiene la siguiente fila y la devuelve como objeto.
+                    echo "<p>$oDepartamento->CodDepartamento     |  ";      //Mostramos el reguistro de la fila de CodDepartamento
+                    echo " $oDepartamento->DescDepartamento      |  ";
+                    echo " $oDepartamento->VolumenNegocio    </p>";
+                    $oDepartamento = $resultadoConsulta->fetchObject();
                 }
         //---------------------------Mostrar si la conexion se ha hecho------------------------------------
                 
@@ -86,6 +87,7 @@
         //----------------------------Cazar excepciones---------------------------------------        
                 
             }catch (PDOException $e) {       //Pero se no se ha podido ejecutar saltara la excepcion
+                $miDB->rollback();           //Si hubo error revierte los cambios
                 $error = $e->getCode();      //guardamos en la variable error el error que salta
                 $mensaje = $e->getMessage(); //guardamos en la variable mensaje el mensaje del error que salta
 
@@ -124,7 +126,8 @@
   
         
         
-<!--        Ultima modificacion 08-04-2021-->
+        <!--        Ultima modificacion 09-04-2021-->
+        <!--        No los he copiado, los he hecho yo -->
     </body>
 </html>
 

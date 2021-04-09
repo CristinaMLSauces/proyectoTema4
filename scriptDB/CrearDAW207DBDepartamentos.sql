@@ -3,7 +3,7 @@
 CREATE DATABASE IF NOT EXISTS DAW207DBDepartamentos;
 
 /* Creacion de usuario administrador de la base de datos: usuarioDAW207DBDepartamentos / paso */
-CREATE USER 'usuarioDAW207DBDepartamentos'@'%' IDENTIFIED BY 'paso';
+CREATE USER 'usuarioDAW207DBDepartamentos'@'%' IDENTIFIED BY 'P@ssw0rd';
 /* Permisos para la base de datos */
 GRANT ALL PRIVILEGES ON DAW207DBDepartamentos.* TO 'usuarioDAW207DBDepartamentos'@'%' WITH GRANT OPTION;
 /* Usar la base de datos creada */

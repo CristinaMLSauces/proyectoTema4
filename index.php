@@ -22,8 +22,8 @@ and open the template in the editor.
                 <h2>CASA</h2>
             </div>
         </a>
-    
-        <a href="doc/Documentacion NetBeans Proyectos.pdf" target="_blank">
+        
+        <a href="doc/CONEXIÓN A LA BASE DE DATOS DESDE DESAROLLO.pdf" target="_blank" >
             <div>
                 <h2>DESAROLLO</h2>
             </div>
@@ -101,14 +101,14 @@ and open the template in the editor.
  </tr>  
  <tr>
     <td><a href="./codigoPHP/ejercicio07PDO.php">Ejercicio 7 - Exportar  </a></td>
-<!--    <td><a title="Play" href="./codigoPHP/ejercicio07PDO.php"><img src="./images/play.png"/></a></td>
-    <td><a title="Codigo" href="./mostrarcodigo/muestraEjercicio07PDO.php"><img src="./images/codigo.png"/></a></td>-->
+    <td><a title="Play" href="./codigoPHP/ejercicio07PDO.php"><img src="./images/play.png"/></a></td>
+    <td><a title="Codigo" href="./mostrarcodigo/muestraEjercicio07PDO.php"><img src="./images/codigo.png"/></a></td>
  </tr>  
 
  <tr>
     <td><a href="./codigoPHP/ejercicio08PDO.php">Ejercicio 8 - Importar  </a></td>
-<!--    <td><a title="Play" href="./codigoPHP/ejercicio08PDO.php"><img src="./images/play.png"/></a></td>
-    <td><a title="Codigo" href="./mostrarcodigo/muestraEjercicio08PDO.php"><img src="./images/codigo.png"/></a></td>-->
+    <td><a title="Play" href="./codigoPHP/ejercicio08PDO.php"><img src="./images/play.png"/></a></td>
+    <td><a title="Codigo" href="./mostrarcodigo/muestraEjercicio08PDO.php"><img src="./images/codigo.png"/></a></td>
  </tr>
  
 </table>

@@ -29,14 +29,13 @@
        <?php 
 
         require_once '../core/210322ValidacionFormularios.php'; //Importamos la libreria de validacion
-        require_once '../config/configDBPDO.php';//Importamos la conexion a la base de datos
+        require_once '../config/configDBPDO_1&1.php';//Importamos la conexion a la base de datos
                    
-            $DescDepartamento = null;
+            $DescDepartamento = null;   //Declaro la variable
 
             try {
                
                 $miDB = new PDO(HOST,USER,PASSWORD);                            //Establecer una conexión con la base de datos 
-                
                 $miDB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //La clase PDO permite definir la fórmula que usará cuando se produzca un error, utilizando el atributo PDO::ATTR_ERRMODE
 
             if (isset($_POST['enviar'])) {                                      //Cuando se pulsa el boton de buscar
@@ -45,15 +44,18 @@
                                                                                 //Tambien podriamos no guardar la variable y poner en la sentencia : '%{$_REQUEST['DescDepartamento']}%';";
                 
                 $consulta = "SELECT * FROM Departamento WHERE DescDepartamento LIKE '%$DescDepartamento%'";     //Guardamos en la variable la consulta que queremos hacer
-                $resultadoConsulta = $miDB->query($consulta);                   //Como es una consulta de select utilizamos query, en $resultado consulta nos devuelve las filas afectadas 
+                $resultadoConsulta = $miDB->prepare($consulta);                 //Preparamos la consulta
                 $resultadoConsulta->execute();                                  //Y luego la ejecutamos
               
+                
+                
+              //-------------------------Mostrar toda la tabla ----------------------------------   
                 echo "<p><strong>Codigo  | Descripcion  | Volumen </strong></p>";
                        
-                while ($odepartamento = $resultadoConsulta->fetchObject()) {    //El fetchObject obtiene la siguiente fila(o la fila buscada si coincide) y la devuelve como objeto.
-                    echo "$odepartamento->CodDepartamento     | ";              
-                    echo "$odepartamento->DescDepartamento    | ";
-                    echo "$odepartamento->VolumenNegocio   <br>";
+                while ($oDepartamento = $resultadoConsulta->fetchObject()) {    //El fetchObject obtiene la siguiente fila(o la fila buscada si coincide) y la devuelve como objeto.
+                    echo "$oDepartamento->CodDepartamento     | ";              
+                    echo "$oDepartamento->DescDepartamento    | ";
+                    echo "$oDepartamento->VolumenNegocio   <br>";
                  }
                     
 
@@ -61,6 +63,7 @@
             echo "<p style='background-color: lightgreen;'> SE HA ESTABLECIDO LA CONEXION </p><br>"; //Salta el mensaje de conexion establecida   
             
             }catch (PDOException $e) {       //Pero se no se ha podido ejecutar saltara la excepcion
+                $miDB->rollback();           //Si hubo error revierte los cambios
                 $error = $e->getCode();      //guardamos en la variable error el error que salta
                 $mensaje = $e->getMessage(); //guardamos en la variable mensaje el mensaje del error que salta
 

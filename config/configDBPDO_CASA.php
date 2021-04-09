@@ -5,7 +5,7 @@
  */
 
 
-//CONSTANTES PARA MSQLI
+//CONSTANTES PARA PDO
 
     define("HOST", "mysql:host=192.168.1.209;dbname=DAW207DBDepartamentos");
     define("USER", "usuarioDAW207DBDepartamentos");
